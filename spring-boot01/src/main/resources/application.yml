@@ -1,0 +1,21 @@
+#server:
+#  port: 8761
+spring:
+  application:
+    name: yunhui-eureka
+  profiles:
+    active: master
+#eureka:
+#  instance:
+#    hostname: localhost
+#  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+
+#security:
+#  basic:
+#    enabled: true #开启认证
+#    name: yunhui-eureka #用户名
+#    password: 123456    #密码
+
+#####搭建集群的配置

@@ -1,0 +1,10 @@
+server:
+  port: 8092
+spring:
+  application:
+    name: fsh-substitution
+
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://yunhui-eureka:123456@localhost:8762/eureka/
