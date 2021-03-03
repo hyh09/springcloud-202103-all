@@ -10,7 +10,7 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://yunhui-eureka:123456@master:8762/eureka/
+      defaultZone: http://yunhui-eureka:123456@master:8761/eureka/
   server:
     enable-self-preservation: false  # 关闭自我保护
 

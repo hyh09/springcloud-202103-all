@@ -7,7 +7,9 @@ eureka:
   client:
     service-url:
       #defaultZone:  http://localhost:8762/eureka/
-      defaultZone:  http://yunhui-eureka:123456@localhost:8762/eureka/
+      #defaultZone:  http://yunhui-eureka:123456@localhost:8762/eureka/
+      ##服务方注册到集群 的eureka注册中心上
+      defaultZone:  http://yunhui-eureka:123456@master:8761/eureka/,http://yunhui-eureka03:123456@slaveone:8763/eureka/
 #security:
 #  basic:
 #    enabled: false

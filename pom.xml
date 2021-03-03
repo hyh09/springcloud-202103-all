@@ -26,13 +26,6 @@
         <module>springcloud-eurak-client02</module>
     </modules>
 
-
-
-
-
-
-
-
     <dependencies>
         <!-- eureka-->
         <!-- eureka 的服务-->
