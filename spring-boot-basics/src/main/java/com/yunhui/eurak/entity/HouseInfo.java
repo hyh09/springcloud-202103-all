@@ -12,4 +12,14 @@ public class HouseInfo {
     private String region;
 
     private String name;
+
+    public HouseInfo() {
+    }
+
+    public HouseInfo(Long id, String city, String region, String name) {
+        this.id = id;
+        this.city = city;
+        this.region = region;
+        this.name = name;
+    }
 }

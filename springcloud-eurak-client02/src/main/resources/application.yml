@@ -8,3 +8,10 @@ eureka:
   client:
     service-url:
       defaultZone:  http://yunhui-eureka:123456@master:8761/eureka/,http://yunhui-eureka03:123456@slaveone:8763/eureka/
+
+
+yun:
+  url8081:
+    host: http://localhost:8081
+    requeset:
+      housedata: /house/data?name=
