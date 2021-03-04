@@ -12,4 +12,17 @@
     <artifactId>springcloud-eurak-client02</artifactId>
 
 
+    <properties>
+         <spring-yun-version>1.0-SNAPSHOT</spring-yun-version>
+    </properties>
+
+
+      <dependencies>
+
+          <dependency>
+              <groupId>spring-yun</groupId>
+              <artifactId>spring-boot-basics</artifactId>
+              <version>1.0-SNAPSHOT</version>
+          </dependency>
+      </dependencies>
 </project>
