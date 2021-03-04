@@ -1,5 +1,5 @@
 server:
-  port:  8091
+  port:  8093
 spring:
   application:
     name: fsh-house
@@ -10,21 +10,9 @@ eureka:
       #defaultZone:  http://yunhui-eureka:123456@localhost:8762/eureka/
       ##服务方注册到集群 的eureka注册中心上
       defaultZone:  http://yunhui-eureka:123456@master:8761/eureka/,http://yunhui-eureka03:123456@slaveone:8763/eureka/
-
-#     healthcheck:
-#      enabled: true #使用心跳检测 （为啥现在没有这个了）
-
   instance:
     ###自定义eureka的ip显示
     instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
     prefer-ip-address: true
     #自定义实例跳转链接
     status-page-url: http://cxytiandi.com/
-    lease-renewal-interval-in-seconds: 5  #表示eureka Client发送心跳的频率 5秒
-    lease-expiration-duration-in-seconds: 5 # 心跳超时时间
-
-
-
-
-
-

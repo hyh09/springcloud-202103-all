@@ -24,6 +24,7 @@
         <module>spring-boot01</module>
         <module>springcloud-eurak-client01</module>
         <module>springcloud-eurak-client02</module>
+        <module>springcloud-eurak-clent-ribbon01</module>
     </modules>
 
     <dependencies>

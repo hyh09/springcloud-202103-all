@@ -13,12 +13,7 @@ eureka:
       defaultZone: http://yunhui-eureka03:1234567@slaveone:8763/eureka/
   server:
     enable-self-preservation: false  # 关闭自我保护
-
-#security:
-#  basic:
-#    enabled: true #开启认证
-#  name: yunhui-eureka #用户名
-#  password: 123456    #密码
+    eviction-interval-timer-in-ms: 5000  #默认60000毫秒   ##清理间隔
 
 #####搭建集群的配
 security:
