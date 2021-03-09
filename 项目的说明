@@ -4,3 +4,9 @@
 
 
 spring-boot01   注册中心
+   8761      name: yunhui-eureka
+             password: 123456
+
+   8763
+
+spring-boot-basics  基础模块 -- 服务的提供方
