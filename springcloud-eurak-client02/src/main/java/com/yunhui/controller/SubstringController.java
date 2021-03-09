@@ -1,6 +1,7 @@
 package com.yunhui.controller;
 
 
+import com.yunhui.config.Url8081Bean;
 import com.yunhui.eurak.entity.HouseInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -23,6 +24,8 @@ public class SubstringController {
     @Autowired
     @Qualifier("RestTemplateBasics")
     private  RestTemplate  restTemplateBasics;
+    @Autowired
+    private Url8081Bean url8081Bean;
 
 
 //    @GetMapping("/callHello")
@@ -40,9 +43,19 @@ public class SubstringController {
     }
 
 
-//    @GetMapping("/customer/data")
-//    public HouseInfo getData(@RequestParam("name") String  name)
-//    {
-////        return  restTemplateBasics.getForObject();
-//    }
+    @GetMapping("/customer/data")
+    public HouseInfo getData(@RequestParam("name") String  name)
+    {
+       System.out.println("url8081Bean.getRequeset()+name"+url8081Bean);
+        return   restTemplateBasics.getForObject(url8081Bean.getRequeset().getHousedata()+name,HouseInfo.class);
+//        return  restTemplateBasics.getForObject();
+    }
+
+    @GetMapping("/customer/data01")
+    public HouseInfo getData01(@RequestParam("name") String  name)
+    {
+
+        return   restTemplateBasics.getForObject("http://localhost:8091/house/data?name="+name,HouseInfo.class);
+//        return  restTemplateBasics.getForObject();
+    }
 }

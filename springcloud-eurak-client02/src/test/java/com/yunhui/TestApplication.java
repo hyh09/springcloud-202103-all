@@ -18,6 +18,6 @@ public class TestApplication {
     @Test
     public   void Test001()
     {
-        System.out.println("====>"+url8081Bean);
+        System.out.println("====>|"+url8081Bean.getRequeset().getHousedata()+"孙悟空");
     }
 }
