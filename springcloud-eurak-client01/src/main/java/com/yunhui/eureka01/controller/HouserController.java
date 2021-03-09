@@ -30,6 +30,14 @@ public class HouserController {
     }
 
 
+    @PostMapping("/save")
+    public  Long  addData(@RequestBody HouseInfo houseInfo)
+    {
+        System.out.println("打印服务方的日志:"+houseInfo.getName());
+        return 100L;
+    }
+
+
 
 
 
