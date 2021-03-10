@@ -9,4 +9,7 @@ spring-boot01   注册中心
 
    8763
 
-spring-boot-basics  基础模块 -- 服务的提供方
+spring-boot-basics  基础模块
+springcloud-eurak-client01  服务的提供方
+    8091 fsh-house
+    8093 fsh-house03 active: test01

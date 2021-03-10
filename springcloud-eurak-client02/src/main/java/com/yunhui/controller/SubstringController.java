@@ -28,11 +28,13 @@ public class SubstringController {
     private Url8081Bean url8081Bean;
 
 
-//    @GetMapping("/callHello")
-//    public  String  callHello()
-//    {
-//        return  restTemplate.getForObject("http://localhost:8091/house/hello",String.class);
-//    }
+    @GetMapping("/callHello")
+    public  String  callHello()
+    {
+        String  result =   restTemplate.getForObject("http://fsh-house/house/hello",String.class);
+        System.out.println("调用结果:"+result);
+        return  result;
+    }
     /**
      * 经过 eureka 注册中心调用
      */

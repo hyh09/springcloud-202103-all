@@ -2,16 +2,21 @@ package com.yunhui.eureka01.controller;
 
 
 import com.yunhui.eurak.entity.HouseInfo;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/house")
 public class HouserController {
 
+
+    @Value("${server.port}")
+    private  String serverPort;
+
     @GetMapping("/hello")
     public  String  hello()
     {
-         return  "hello";
+         return  "hello"+"当前服务"+serverPort;
     }
 
 
