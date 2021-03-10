@@ -42,7 +42,11 @@ public class SubstringController {
         return  "通过eureka注册的调用："+restTemplate.getForObject("http://fsh-house/house/hello",String.class);
     }
 
-
+    /**
+     * http://localhost:8091//house/data?name=
+     * @param name
+     * @return
+     */
     @GetMapping("/customer/data")
     public HouseInfo getData(@RequestParam("name") String  name)
     {

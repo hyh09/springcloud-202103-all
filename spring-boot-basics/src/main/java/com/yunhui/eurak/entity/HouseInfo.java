@@ -2,8 +2,10 @@ package com.yunhui.eurak.entity;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class HouseInfo {
+public class HouseInfo implements Serializable {
 
     private Long id;
 
