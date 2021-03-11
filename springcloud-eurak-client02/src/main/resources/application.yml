@@ -15,3 +15,9 @@ yun:
     host: http://localhost:8091
     requeset:
       housedata: ${yun.url8081.host}/house/data?name=
+###Ribbon
+##解决的方法很简单，既然第一次调用时候产生RibbonClient耗时，那么就让它提前创建，而不是在第一次调用的时候创建。
+ribbon:
+  eager-load:
+    enabled: true  #开启Ribbon的饥饿加载模式
+    clients: fsh-house  #指定需要饥饿的加载的服务名,也就是你需要调用的服务,若有多个则用逗号隔开

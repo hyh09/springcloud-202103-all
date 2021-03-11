@@ -7,7 +7,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 
 @EnableDiscoveryClient  /**  客户端 ，消费*/
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.yunhui")
 public class FshApplicationClient {
 
     public  static  void main(String[] args)
