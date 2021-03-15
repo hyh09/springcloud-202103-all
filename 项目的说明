@@ -9,7 +9,10 @@ spring-boot01   注册中心
 
    8763
 
+   nohup java -jar spring-boot01-1.0-SNAPSHOT.jar --sprig.profiles.avtive=master >log8761.log 2>&1 &
+   nohup java -jar spring-boot01-1.0-SNAPSHOT.jar --spring.profiles.active=test >log8763.log 2>&1 &
+
 spring-boot-basics  基础模块
 springcloud-eurak-client01  服务的提供方
-    8091 fsh-house
-    8093 fsh-house03 active: test01
+    8091 fsh-house   springcloud-eurak-client01-1.0-SNAPSHOT.jar
+    8093 fsh-house03 active: test01      nohup java -jar springcloud-eurak-client01-1.0-SNAPSHOT.jar --spring.profiles.active=test01 >log8093.log 2>&1 &
