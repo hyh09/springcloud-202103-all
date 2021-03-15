@@ -1,4 +1,4 @@
-host: 10.1.252.2
+host: localhost #10.1.252.2
 
 server:
   port: 8763
