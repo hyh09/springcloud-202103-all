@@ -1,3 +1,5 @@
+host: 10.1.252.2
+
 server:
   port: 8763
 spring:
@@ -5,7 +7,7 @@ spring:
     name: yunhui-eureka
 eureka:
   instance:
-    hostname: localhost
+    hostname: ${host}
   client:
     register-with-eureka: false
     fetch-registry: false

@@ -52,6 +52,20 @@
     </dependencies>
 
 
+   <!--如果少这部分的时候会报： no main manifest attribute, in spring-boot01-1.0-SNAPSHOT.jar  -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <executable>true</executable>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
 
 
     <!--<build>-->
@@ -65,61 +79,61 @@
 
 
     <!--配置环境的profile-->
-    <profiles>
-        <profile>
-            <id>dev</id>
-            <properties>
-                <!--使用${environment}获取值-->
-                <environment>dev</environment>
-            </properties>
-        </profile>
-        <profile>
-            <id>master</id>
-            <properties>
-                <environment>master</environment>
-            </properties>
-        </profile>
-        <profile>
-            <id>slaveone</id>
-            <properties>
-                <environment>slaveone</environment>
-            </properties>
-        </profile>
-    </profiles>
-    <build>
-        <!--suppress UnresolvedMavenProperty -->
-        <finalName>hhInterface-xxl-${environment}</finalName>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <includeSystemScope>true</includeSystemScope>
-                </configuration>
-            </plugin>
-        </plugins>
-        <resources>
-            <!--排除环境配置文件-->
-            <resource>
-                <directory>src/main/resources</directory>
-                <excludes>
-                    <exclude>application-*.yml</exclude>
-                    <exclude>application.yml</exclude>
-                </excludes>
-            </resource>
+    <!--<profiles>-->
+        <!--<profile>-->
+            <!--<id>dev</id>-->
+            <!--<properties>-->
+                <!--&lt;!&ndash;使用${environment}获取值&ndash;&gt;-->
+                <!--<environment>dev</environment>-->
+            <!--</properties>-->
+        <!--</profile>-->
+        <!--<profile>-->
+            <!--<id>master</id>-->
+            <!--<properties>-->
+                <!--<environment>master</environment>-->
+            <!--</properties>-->
+        <!--</profile>-->
+        <!--<profile>-->
+            <!--<id>slaveone</id>-->
+            <!--<properties>-->
+                <!--<environment>slaveone</environment>-->
+            <!--</properties>-->
+        <!--</profile>-->
+    <!--</profiles>-->
+    <!--<build>-->
+        <!--&lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;-->
+        <!--<finalName>hhInterface-xxl-${environment}</finalName>-->
+        <!--<plugins>-->
+            <!--<plugin>-->
+                <!--<groupId>org.springframework.boot</groupId>-->
+                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+                <!--<configuration>-->
+                    <!--<includeSystemScope>true</includeSystemScope>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+        <!--</plugins>-->
+        <!--<resources>-->
+            <!--&lt;!&ndash;排除环境配置文件&ndash;&gt;-->
+            <!--<resource>-->
+                <!--<directory>src/main/resources</directory>-->
+                <!--<excludes>-->
+                    <!--<exclude>application-*.yml</exclude>-->
+                    <!--<exclude>application.yml</exclude>-->
+                <!--</excludes>-->
+            <!--</resource>-->
 
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-                <!-- 打包时包含的文件 -->
-                <includes>
-                    <!--suppress UnresolvedMavenProperty -->
-                    <include>application-${environment}.yml</include>
-                    <include>application.yml</include>
-                </includes>
-            </resource>
-        </resources>
-    </build>
+            <!--<resource>-->
+                <!--<directory>src/main/resources</directory>-->
+                <!--<filtering>true</filtering>-->
+                <!--&lt;!&ndash; 打包时包含的文件 &ndash;&gt;-->
+                <!--<includes>-->
+                    <!--&lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;-->
+                    <!--<include>application-${environment}.yml</include>-->
+                    <!--<include>application.yml</include>-->
+                <!--</includes>-->
+            <!--</resource>-->
+        <!--</resources>-->
+    <!--</build>-->
 
     <pluginRepositories>
         <pluginRepository>

@@ -1,0 +1,11 @@
+##
+
+nohup java -jar /www/testapi/partner-api-0.0.1.jar --spring.profiles.active=test >> /www/apiLog/yunLog.log 2>&1
+
+
+##1.打包之后的名字是： hhInterface-xxl-master.jar     配置环境的profile的配置的;
+
+
+10.1.252.2
+ nobup java -jar hhInterface-xxl-master.jar  --spring.profiles.active=master >> /www/yunbak/yunlog8761.log 2>&1
+application-slaveone.yml

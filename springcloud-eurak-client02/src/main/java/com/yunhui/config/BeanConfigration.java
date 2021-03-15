@@ -1,5 +1,7 @@
 package com.yunhui.config;
 
+import com.netflix.loadbalancer.IRule;
+import com.netflix.loadbalancer.RandomRule;
 import com.yunhui.intercept.MyLoadBalanced;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
@@ -14,6 +16,11 @@ public class BeanConfigration {
     //@MyLoadBalanced
     public RestTemplate  getRestTemplate(){
          return  new RestTemplate();
+    }
+
+    @Bean
+    public IRule ribbonRule() {
+        return new RandomRule();//这里配置策略，和配置文件对应
     }
 
     @Bean("RestTemplateBasics")

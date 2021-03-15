@@ -21,3 +21,10 @@ ribbon:
   eager-load:
     enabled: true  #开启Ribbon的饥饿加载模式
     clients: fsh-house  #指定需要饥饿的加载的服务名,也就是你需要调用的服务,若有多个则用逗号隔开
+
+####客户端负载
+fsh-substitution:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+# com.netflix.loadbalancer.RandomRule   随机策略
