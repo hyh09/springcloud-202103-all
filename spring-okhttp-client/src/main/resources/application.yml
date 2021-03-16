@@ -1,0 +1,15 @@
+
+
+ok:
+  http:
+    connect-timeout: 30
+    read-timeout: 30
+    write-timeout: 30
+    max-idle-connections: 200
+    keep-alive-duration: 300
+
+server:
+  port:  8099
+spring:
+  application:
+    name: okhttp3-springboot

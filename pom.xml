@@ -28,6 +28,7 @@
         <module>spring-boot-basics</module>
         <module>spring-try-retry</module>
         <module>spring-try-guava-retry</module>
+        <module>spring-okhttp-client</module>
     </modules>
 
     <dependencies>
