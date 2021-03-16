@@ -27,6 +27,7 @@
         <module>springcloud-eurak-clent-ribbon01</module>
         <module>spring-boot-basics</module>
         <module>spring-try-retry</module>
+        <module>spring-try-guava-retry</module>
     </modules>
 
     <dependencies>

@@ -2,6 +2,8 @@
 1.项目代码： https://github.com/yinjihuan/spring-cloud
 2.书籍：  《springcloud微服务》
 
+spring-try-retry  重试机制的
+
 
 spring-boot01   注册中心
    8761      name: yunhui-eureka
