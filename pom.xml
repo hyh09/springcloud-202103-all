@@ -26,6 +26,7 @@
         <module>springcloud-eurak-client02</module>
         <module>springcloud-eurak-clent-ribbon01</module>
         <module>spring-boot-basics</module>
+        <module>spring-try-retry</module>
     </modules>
 
     <dependencies>

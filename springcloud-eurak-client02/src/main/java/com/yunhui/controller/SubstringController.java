@@ -5,6 +5,7 @@ import com.yunhui.config.Url8081Bean;
 import com.yunhui.eurak.entity.HouseInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,7 +35,9 @@ public class SubstringController {
     @GetMapping("/callHello")
     public  String  callHello()
     {
-         this.loadBalancerClient.choose("fsh-substitution");
+//        ServiceInstance serviceInstance =    this.loadBalancerClient.choose("fsh-substitution");
+//        System.out.println("调用结果serviceInstance:"+ serviceInstance);
+
         String  result =   restTemplate.getForObject("http://fsh-house/house/hello",String.class);
         System.out.println("调用结果:"+result);
         return  result;
@@ -48,7 +51,7 @@ public class SubstringController {
         return  "通过eureka注册的调用："+restTemplate.getForObject("http://fsh-house/house/hello",String.class);
     }
 
-    /**beyond@2019
+    /**
      * http://localhost:8091//house/data?name=
      * @param name
      * @return
