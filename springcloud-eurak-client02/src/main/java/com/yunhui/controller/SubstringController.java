@@ -3,6 +3,7 @@ package com.yunhui.controller;
 
 import com.yunhui.config.Url8081Bean;
 import com.yunhui.eurak.entity.HouseInfo;
+import com.yunhui.feign01.svc.HouseRemoteSvc;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cloud.client.ServiceInstance;
@@ -31,6 +32,8 @@ public class SubstringController {
     @Autowired
     private Url8081Bean url8081Bean;
 
+    @Autowired
+    private HouseRemoteSvc  houseRemoteSvc;
 
     @GetMapping("/callHello")
     public  String  callHello()
@@ -38,7 +41,10 @@ public class SubstringController {
 //        ServiceInstance serviceInstance =    this.loadBalancerClient.choose("fsh-substitution");
 //        System.out.println("调用结果serviceInstance:"+ serviceInstance);
 
-        String  result =   restTemplate.getForObject("http://fsh-house/house/hello",String.class);
+        String  result1 =   restTemplate.getForObject("http://fsh-house/house/hello",String.class);
+        System.out.println("调用结果1:"+result1);
+
+        String  result = houseRemoteSvc.hello();
         System.out.println("调用结果:"+result);
         return  result;
     }
