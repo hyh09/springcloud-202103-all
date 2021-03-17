@@ -1,0 +1,1 @@
+package com.yunhui.feign01.svc;

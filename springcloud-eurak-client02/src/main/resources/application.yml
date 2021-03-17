@@ -33,3 +33,4 @@ fsh-substitution:
 
 # com.netflix.loadbalancer.RandomRule   随机策略
 
+logging.level.com.yunhui.feign01.svc: debug
